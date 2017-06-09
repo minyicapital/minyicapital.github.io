@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>ARIES - Free Bootstrap Theme by WowThemes.net</title>
+<title>上海敏懿资产</title>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
@@ -31,7 +31,7 @@
 		<i class="fa fa-bars"></i>
 		</button>
 		<a class="navbar-brand page-scroll" href="index.html">
-		敏懿资本 </a>
+		敏懿资产 </a>
 	</div>
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -46,10 +46,7 @@
 			<a href="page-sample.html">我们做什么</a>
 			</li>
 			<li>
-			<a href="contact.html">游记</a>
-			</li>
-			<li>
-			<a href="contact.html">人员招聘</a>
+			<a href="contact.html">联系我们</a>
 			</li>
 		</ul>
 	</div>
@@ -79,7 +76,7 @@
 		<h2>公司介绍</h2>
 		<div class="col-lg-8 col-lg-offset-2">
 			<p>
-				上海敏懿资产管理有限公司.资产管理，投资管理，投资咨询，商务咨询，企业管理咨询，企业形象策划，市场营销策划，会展服务，金融信息服务（除金融业务）。中国（上海）自由贸易试验区北张家浜路128号1051室
+				上海敏懿资产管理有限公司.资产管理，投资管理，投资咨询，商务咨询，企业管理咨询，企业形象策划，市场营销策划，会展服务，金融信息服务（除金融业务）
 			</p>
 			<p> <a href="#" class="btnghost"><em class="fa fa-download"></em> 创始人简历</a> </p>
 		</div>
@@ -158,27 +155,40 @@
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
 			<h2>联系方式</h2>
-			<p>电话：？？？？
-		       地址：
-				 
+			<p>电话：862161010362</p>
+	        <p>地址：上海浦东（陆家嘴）花园石桥路33号花旗大厦23层 
 			</p>
 			<p>
-				<i><a href="mailto:wowthemesnet@gmail.com" style="border-bottom:1px dashed #ccc;">邮箱：wowthemesnet@gmail.com</a></i>
+				<i><a href="mailto:wowthemesnet@gmail.com" style="border-bottom:1px dashed #ccc;">邮箱：cmzlm@sina.com</a></i>
 			</p>
-			<ul class="list-inline banner-social-buttons">
-				<li>
-				<a href="https://twitter.com/wowthemesnet" class="btn btnghost btn-lg"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a>
-				</li>
-				<li>
-				<a href="https://www.facebook.com/pages/wowthemesnet/562560840468823" class="btn btnghost btn-lg"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a>
-				</li>
-				<li>
-				<a href="https://plus.google.com/u/0/b/110916582192388695332/110916582192388695332/posts" class="btn btnghost btn-lg"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google+</span></a>
-				</li>
-			</ul>
 		</div>
 	</div>
 </div>
+<div id="map" style="height:400px;width:400px;margin:auto"></div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0cYQAraPBaGYz4s0ruelb96VLY9ZKMbM"></script>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("map");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(121.507104,31.239685), 17);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);
+	//开启鼠标滚轮缩放
+	var point = new BMap.Point(121.507104,31.239685);
+	var marker = new BMap.Marker(point);
+	map.addOverlay(maker);
+	map.centerAndZoom(point,17)
+	var opts = {
+	  width : 200,     // 信息窗口宽度
+	  height: 100,     // 信息窗口高度
+	  title : "花旗集团大厦" , // 信息窗口标题
+	}
+	var infoWindow = new BMap.InfoWindow("地址：上海浦东新区花园石桥路33号 ", opts);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow,point); //开启信息窗口
+	});
+</script>
+
 </section>
 <!-- Footer -->
 <footer>
