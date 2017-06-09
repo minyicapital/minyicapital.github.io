@@ -167,25 +167,23 @@
 <div id="map" style="height:400px;width:400px;margin:auto"></div>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0cYQAraPBaGYz4s0ruelb96VLY9ZKMbM"></script>
 <script type="text/javascript">
-	// 百度地图API功能
-	var map = new BMap.Map("map");    // 创建Map实例
-	map.centerAndZoom(new BMap.Point(121.507104,31.239685), 17);  // 初始化地图,设置中心点坐标和地图级别
-	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-	map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
+	var map = new BMap.Map("map");   
+	map.centerAndZoom(new BMap.Point(121.507104,31.239685), 17);  
+	map.addControl(new BMap.MapTypeControl());   
+	map.setCurrentCity("shanghai");        
 	map.enableScrollWheelZoom(true);
-	//开启鼠标滚轮缩放
 	var point = new BMap.Point(121.507104,31.239685);
 	var marker = new BMap.Marker(point);
 	map.addOverlay(maker);
 	map.centerAndZoom(point,17)
 	var opts = {
-	  width : 200,     // 信息窗口宽度
-	  height: 100,     // 信息窗口高度
-	  title : "花旗集团大厦" , // 信息窗口标题
+	  width : 200,    
+	  height: 100,     
+	  title : "花旗集团大厦" ,
 	}
-	var infoWindow = new BMap.InfoWindow("地址：上海浦东新区花园石桥路33号 ", opts);  // 创建信息窗口对象 
+	var infoWindow = new BMap.InfoWindow("地址：上海浦东新区花园石桥路33号 ", opts);  
 	marker.addEventListener("click", function(){          
-		map.openInfoWindow(infoWindow,point); //开启信息窗口
+		map.openInfoWindow(infoWindow,point); 
 	});
 </script>
 
