@@ -23,3 +23,16 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+// random images
+$('input').on('change', function () {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $('#my_image').attr('src', e.target.result);
+    }
+
+    if (!this.files.length) return;
+
+    var randIndex = parseInt(Math.random() * this.files.length, 10);
+    reader.readAsDataURL(this.files[randIndex]);
+
+});
