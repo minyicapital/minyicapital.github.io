@@ -16,6 +16,8 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0cYQAraPBaGYz4s0ruelb96VLY9ZKMbM"></script>
+<style type="text/css">	#allmap{height:400px;width:400px;margin:auto}
+	</style>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -168,7 +170,7 @@
 </div>
 </section>
 <section>
-<div id="allmap" style="height:400px;width:400px;margin:auto"></div>
+<div id="allmap"></div>
 <script type="text/javascript">
 	var map = new BMap.Map("allmap");   
 	map.centerAndZoom(new BMap.Point(121.507104,31.239685), 17);  
