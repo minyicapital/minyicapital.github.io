@@ -83,12 +83,41 @@
 	        <p>地址：上海浦东（陆家嘴）花园石桥路33号花旗大厦23层 
 			</p>
 			<p>
-				<i><a href="mailto:smartvirtue@sina.com" style="border-bottom:1px dashed #ccc;">邮箱：smartvirtue@sina.com</a></i>
+				<i><a href="mailto:smartvirtue@sina.com" style="border-bottom:1px dashed #ccc;">邮箱：minyicapital@sina.com</a></i>
 			</p>
 		</div>
 	</div>
 </div>
 </section>
+<section>
+<strong><script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0cYQAraPBaGYz4s0ruelb96VLY9ZKMbM"></script></strong>
+
+<div id="allmap" style="height:400px;width:400px;margin:auto">
+<script type="text/javascript">
+	var map = new BMap.Map("allmap");   
+	map.centerAndZoom(new BMap.Point(121.507104,31.239685), 17);  
+	map.addControl(new BMap.MapTypeControl());   
+	map.setCurrentCity("shanghai");        
+	map.enableScrollWheelZoom(true);
+	var point = new BMap.Point(121.507104,31.239685);
+	var marker = new BMap.Marker(point);
+	map.addOverlay(maker);
+	map.centerAndZoom(point,17)
+	var opts = {
+		width : 200,    
+ 	height: 100,     
+ 	title : "花旗集团大厦" ,
+}
+var infoWindow = new BMap.InfoWindow("地址：上海浦东新区花园石桥路33号 ", opts);  
+marker.addEventListener("click", function(){          
+map.openInfoWindow(infoWindow,point); 
+});
+</script>
+</div>
+</section>
+
+
+
 <section id="portfolio">
 
 <div class="gallery">
